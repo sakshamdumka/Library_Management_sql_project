@@ -298,8 +298,7 @@ BEGIN
 END;
 $$;
 ```
-Call Stored Procedure
-```sql
+--Call Stored Procedure
 CALL add_return_status('RS125', 'IS137');
 ```
 
@@ -412,8 +411,7 @@ BEGIN
 	END IF;
 END;
 $$;
-```
-Call the Stored Procedure.
-```sql
+
+--Call the Stored Procedure.
 CALL select_book('IS145', 'C109', '978-0-14-118776-1', 'E104');
 ```
