@@ -113,7 +113,7 @@ CREATE TABLE return_status
 <br>
 ***Delete:*** Removed records from the members table as needed.
 
-***TASK 1. Create a New Book Record***
+***TASK 1. Create a New Book Record.***
 <br>
 "('978-1-60129-456-2', 'To Kill a Mockingbird', 'Classic', 6.00, 'yes', 'Harper Lee', 'J.B. Lippincott & Co.')"
 ```sql
@@ -121,21 +121,21 @@ INSERT INTO books
 VALUES
 ('978-1-60129-456-2', 'To Kill a Mockingbird', 'Classic', 6.00, 'yes', 'Harper Lee', 'J.B. Lippincott & Co.');
 ```
-***TASK 2: Update an Existing Member's Address***
+***TASK 2: Update an Existing Member's Address.***
 ```sql
 UPDATE members
 SET member_address = '125 main street'
 WHERE member_id = 'C101';
 ```
 
-***TASK 3: Delete a Record from the Issued Status Table***
+***TASK 3: Delete a Record from the Issued Status Table.***
 <br>
 ***Objective: Delete the record with issued_id = 'IS121' from the issued_status table.***
 ```sql
 DELETE FROM issued_status
 WHERE issued_id = 'IS121';
 ```
-***TASK 4: Retrieve All Books Issued by a Specific Employee***
+***TASK 4: Retrieve All Books Issued by a Specific Employee.***
 <br>
 ***Objective: Select all books issued by the employee with emp_id = 'E101'.***
 ```sql
@@ -144,7 +144,7 @@ FROM issued_status
 WHERE issued_emp_id = 'E101'
 ```
 
-***TASK 5: List Members Who Have Issued More Than One Book***
+***TASK 5: List Members Who Have Issued More Than One Book.***
 <br>
 ***Objective: Use GROUP BY to find members who have issued more than one***
 ```sql
