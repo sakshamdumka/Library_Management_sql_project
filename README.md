@@ -3,7 +3,8 @@
 ## Project Overview
 
 ***Project Title:*** Library Management System
-***Database:*** ```sqllibrary_management_db```
+<br>
+***Database:*** ```library_management_db```
 
 ***PROJECT TASKS***
 
