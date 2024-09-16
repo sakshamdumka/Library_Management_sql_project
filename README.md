@@ -227,11 +227,10 @@ containing members who have issued at least one book in the last 2 months.***
 CREATE TABLE active_members
 AS
 SELECT * FROM members
-WHERE member_id IN (SELECT 
-                        DISTINCT issued_member_id   
+WHERE member_id IN (
+		    SELECT DISTINCT issued_member_id   
                     FROM issued_status
-                    WHERE 
-                        issued_date >= CURRENT_DATE - INTERVAL '2 month'
+                    WHERE issued_date >= CURRENT_DATE - INTERVAL '2 month'
                     )
 ```
 
