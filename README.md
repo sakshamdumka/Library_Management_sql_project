@@ -415,3 +415,31 @@ $$;
 --Call the Stored Procedure.
 CALL select_book('IS145', 'C109', '978-0-14-118776-1', 'E104');
 ```
+
+***TASK 19:*** Create Table As Select (CTAS) 
+<br>
+Objective:Create a CTAS (Create Table As Select) query to identify overdue books and calculate fines.
+<br>
+Description: Write a CTAS query to create a new table that lists each member and the books they have
+issued but not returned within 30 days. The table should include: The number of overdue books.
+The total fines, with each day's fine calculated at $0.50. The number of books issued by each member.
+The resulting table should show: Member ID Number of overdue books Total fines
+```sql
+WITH cte1 AS(
+SELECT *,
+	   ((CURRENT_DATE - issued_date) - 30) * 0.50 as fine
+FROM members m
+LEFT JOIN issued_status ist
+ON m.member_id = ist.issued_member_id
+LEFT JOIN return_status rs
+ON rs.issued_id = ist.issued_id
+WHERE return_date IS NULL
+AND (CURRENT_DATE - issued_date) - 30 >=1
+)
+
+SELECT member_id,
+	   COUNT(*) as no_of_overdues_books,
+	   SUM(fine) as total_fine
+FROM cte1
+GROUP BY member_id
+```
