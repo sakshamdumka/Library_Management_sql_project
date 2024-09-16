@@ -1,6 +1,6 @@
 # Library_Management_sql_project
 
-***Project Tasks***
+***PROJECT TASKS***
 
 ***TASK 1. Create a New Book Record***
 <br>
