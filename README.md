@@ -104,6 +104,12 @@ CREATE TABLE return_status
 ```
 <br>
 
+## 2. CRUD Operations
+***Create:*** Inserted sample records into the books table.
+***Read:*** Retrieved and displayed data from various tables.
+***Update:*** Updated records in the employees table.
+***Delete:*** Removed records from the members table as needed.
+
 ***TASK 1. Create a New Book Record***
 <br>
 "('978-1-60129-456-2', 'To Kill a Mockingbird', 'Classic', 6.00, 'yes', 'Harper Lee', 'J.B. Lippincott & Co.')"
