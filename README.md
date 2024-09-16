@@ -106,8 +106,11 @@ CREATE TABLE return_status
 
 ## 2. CRUD Operations
 ***Create:*** Inserted sample records into the books table.
+<br>
 ***Read:*** Retrieved and displayed data from various tables.
+<br>
 ***Update:*** Updated records in the employees table.
+<br>
 ***Delete:*** Removed records from the members table as needed.
 
 ***TASK 1. Create a New Book Record***
