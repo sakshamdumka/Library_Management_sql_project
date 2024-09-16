@@ -78,7 +78,7 @@ CREATE TABLE books
             publisher VARCHAR(30)
 );
 ```
-Create table "issue_status"
+Create table "issued_status"
 ```sql
 DROP TABLE IF EXISTS issued_status;
 CREATE TABLE issued_status
