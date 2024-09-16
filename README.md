@@ -29,7 +29,7 @@ CREATE DATABASE library_db;
 ***Table Creation:*** Created tables for branches, employees, members, books, issued status, and return status. Each table includes relevant columns and relationships.
 <br>
 
-Create table "Branch"
+Create table "branch"
 ```sql
 DROP TABLE IF EXISTS branch;
 CREATE TABLE branch
@@ -40,8 +40,7 @@ CREATE TABLE branch
             contact_no VARCHAR(15)
 );
 ```
-
-Create table "Employee"
+Create table "employees"
 ```sql
 DROP TABLE IF EXISTS employees;
 CREATE TABLE employees
@@ -54,8 +53,7 @@ CREATE TABLE employees
             FOREIGN KEY (branch_id) REFERENCES  branch(branch_id)
 );
 ```
-
-Create table "Members"
+Create table "members"
 ```sql
 DROP TABLE IF EXISTS members;
 CREATE TABLE members
@@ -67,7 +65,7 @@ CREATE TABLE members
 );
 ```
 ```sql
-Create table "Books"
+Create table "books"
 DROP TABLE IF EXISTS books;
 CREATE TABLE books
 (
@@ -80,8 +78,7 @@ CREATE TABLE books
             publisher VARCHAR(30)
 );
 ```
-
-Create table "IssueStatus"
+Create table "issue_status"
 ```sql
 DROP TABLE IF EXISTS issued_status;
 CREATE TABLE issued_status
@@ -97,8 +94,7 @@ CREATE TABLE issued_status
             FOREIGN KEY (issued_book_isbn) REFERENCES books(isbn) 
 );
 ```
-
-Create table "ReturnStatus"
+Create table "return_status"
 ```sql
 DROP TABLE IF EXISTS return_status;
 CREATE TABLE return_status
