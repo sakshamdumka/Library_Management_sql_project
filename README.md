@@ -20,12 +20,15 @@ This project demonstrates the implementation of a Library Management System usin
 
 ## Project Structure
 **1.** ***Database Setup***
+<br>
 ***Database Creation:*** Created a database named ```library_management_db```
 <br>
 ***Table Creation:*** Created tables for branches, employees, members, books, issued status, and return status. Each table includes relevant columns and relationships.
 <br>
+```sql
 CREATE DATABASE library_db;
-
+```
+```sql
 DROP TABLE IF EXISTS branch;
 CREATE TABLE branch
 (
@@ -34,9 +37,10 @@ CREATE TABLE branch
             branch_address VARCHAR(30),
             contact_no VARCHAR(15)
 );
+```
 
-
--- Create table "Employee"
+Create table "Employee"
+```sql
 DROP TABLE IF EXISTS employees;
 CREATE TABLE employees
 (
@@ -47,9 +51,10 @@ CREATE TABLE employees
             branch_id VARCHAR(10),
             FOREIGN KEY (branch_id) REFERENCES  branch(branch_id)
 );
+```
 
-
--- Create table "Members"
+Create table "Members"
+```sql
 DROP TABLE IF EXISTS members;
 CREATE TABLE members
 (
@@ -58,10 +63,9 @@ CREATE TABLE members
             member_address VARCHAR(30),
             reg_date DATE
 );
-
-
-
--- Create table "Books"
+```
+```sql
+Create table "Books"
 DROP TABLE IF EXISTS books;
 CREATE TABLE books
 (
@@ -73,10 +77,10 @@ CREATE TABLE books
             author VARCHAR(30),
             publisher VARCHAR(30)
 );
+```
 
-
-
--- Create table "IssueStatus"
+Create table "IssueStatus"
+```sql
 DROP TABLE IF EXISTS issued_status;
 CREATE TABLE issued_status
 (
@@ -90,10 +94,10 @@ CREATE TABLE issued_status
             FOREIGN KEY (issued_emp_id) REFERENCES employees(emp_id),
             FOREIGN KEY (issued_book_isbn) REFERENCES books(isbn) 
 );
+```
 
-
-
--- Create table "ReturnStatus"
+Create table "ReturnStatus"
+```sql
 DROP TABLE IF EXISTS return_status;
 CREATE TABLE return_status
 (
@@ -104,7 +108,9 @@ CREATE TABLE return_status
             return_book_isbn VARCHAR(50),
             FOREIGN KEY (return_book_isbn) REFERENCES books(isbn)
 );
+```
 <br>
+
 ***TASK 1. Create a New Book Record***
 <br>
 "('978-1-60129-456-2', 'To Kill a Mockingbird', 'Classic', 6.00, 'yes', 'Harper Lee', 'J.B. Lippincott & Co.')"
