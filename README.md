@@ -191,9 +191,9 @@ $$;
 CALL add_return_status('RS125', 'IS137');
 ```
 
-***TASK 15: Branch Performance Report.
-Create a query that generates a performance report for each branch,
-showing the number of books issued, the number of books returned,
+***TASK 15: Branch Performance Report.***
+<br>
+***Create a query that generates a performance report for each branch, showing the number of books issued, the number of books returned,
 and the total revenue generated from book rentals.***
 ```sql
 CREATE TABLE branch_report
@@ -203,13 +203,17 @@ SELECT b.branch_id,
 	   COUNT(rs.return_id) as no_books_returned,
 	   SUM(bk.rental_price) as total_revenue
 FROM branch b
-JOIN employees e
-ON b.branch_id = e.branch_id
-LEFT JOIN issued_status ist
+JOIN
+ employees e
+ON bbranch_id = e.branch_id
+LEFT JOIN
+issued_status ist
 ON e.emp_id = ist.issued_emp_id
-LEFT JOIN return_status rs
+LEFT JOIN
+return_status rs
 ON ist.issued_id = rs.issued_id
-LEFT JOIN books bk
+LEFT JOIN
+books bk
 ON ist.issued_book_isbn = bk.isbn
 GROUP BY b.branch_id
 ORDER BY 1;
@@ -242,7 +246,8 @@ SELECT emp_id,
 	   COUNT(issued_id) as no_books_processed,
 	   branch_id
 FROM employees e
-LEFT JOIN issued_status ist
+LEFT JOIN
+issued_status ist
 ON e.emp_id = ist.issued_emp_id
 GROUP BY emp_id, emp_name, branch_id
 ORDER BY no_books_processed DESC
@@ -270,29 +275,30 @@ p_issued_book_isbn VARCHAR(25), p_issued_emp_id VARCHAR(10))
 LANGUAGE plpgsql
 AS $$
 DECLARE
-		v_status VARCHAR(10);
+	v_status VARCHAR(10);
 		v_book_title VARCHAR(100);
 BEGIN
-		SELECT status, book_title
-			   INTO v_status, v_book_title
-		FROM books
-		WHERE isbn = p_issued_book_isbn;
+	SELECT status,
+	       book_title
+	       INTO v_status,
+	       v_book_title
+	FROM books
+	WHERE isbn = p_issued_book_isbn;
 
-		IF v_status = 'yes' THEN 
-				INSERT INTO issued_status(issued_id, issued_member_id, issued_date, issued_book_isbn,
-				issued_emp_id)
-				VALUES
-				(p_issued_id, p_issued_member_id, CURRENT_DATE, p_issued_book_isbn, p_issued_emp_id);
+	IF v_status = 'yes' THEN 
+			    INSERT INTO issued_status(issued_id, issued_member_id, issued_date, issued_book_isbn,issued_emp_id)
+			    VALUES
+			    (p_issued_id, p_issued_member_id, CURRENT_DATE, p_issued_book_isbn, p_issued_emp_id);
 
-				UPDATE books
-				SET status = 'no'
-				WHERE isbn = p_issued_book_isbn;
+			    UPDATE books
+			    SET status = 'no'
+			    WHERE isbn = p_issued_book_isbn;
 		
-				RAISE NOTICE 'The issued book record is successfull for book: %', v_book_title;
+			    RAISE NOTICE 'The issued book record is successfull for book: %', v_book_title;
 		
-	    ELSE
-			 	RAISE NOTICE 'The book is not available with the book name: %', v_book_title;
-		END IF;
+	ELSE
+			    RAISE NOTICE 'The book is not available with the book name: %', v_book_title;
+	END IF;
 END;
 $$;
 ```
