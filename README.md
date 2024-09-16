@@ -21,6 +21,7 @@ This project demonstrates the implementation of a Library Management System usin
 ## Project Structure
 **1.** ***Database Setup***
 <br>
+
 ***Database Creation:*** Created a database named ```library_management_db```
 ```sql
 CREATE DATABASE library_db;
