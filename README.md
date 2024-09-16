@@ -380,8 +380,7 @@ it should be issued, and the status in the books table should be updated to 'no'
 ***If the book is not available (status = 'no'), the procedure should return an error message indicating
 that the book is currently not available.***
 ```sql
-CREATE OR REPLACE PROCEDURE select_book(p_issued_id VARCHAR(10), p_issued_member_id VARCHAR(10),
-p_issued_book_isbn VARCHAR(25), p_issued_emp_id VARCHAR(10))
+CREATE OR REPLACE PROCEDURE select_book(p_issued_id VARCHAR(10), p_issued_member_id VARCHAR(10), p_issued_book_isbn VARCHAR(25), p_issued_emp_id VARCHAR(10))
 LANGUAGE plpgsql
 AS $$
 DECLARE
