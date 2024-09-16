@@ -18,6 +18,10 @@ This project demonstrates the implementation of a Library Management System usin
 <br>
 ***4.Advanced SQL Queries:*** Develop complex queries to analyze and retrieve specific data.
 
+## Project Structure
+***Database Creation:*** Created a database named ```library_management_db```
+<br>
+***Table Creation:*** Created tables for branches, employees, members, books, issued status, and return status. Each table includes relevant columns and relationships.
 ***TASK 1. Create a New Book Record***
 <br>
 "('978-1-60129-456-2', 'To Kill a Mockingbird', 'Classic', 6.00, 'yes', 'Harper Lee', 'J.B. Lippincott & Co.')"
