@@ -29,8 +29,8 @@ CREATE DATABASE library_db;
 ***Table Creation:*** Created tables for branches, employees, members, books, issued status, and return status. Each table includes relevant columns and relationships.
 <br>
 
-Create table "branch"
 ```sql
+--Create table "branch"
 DROP TABLE IF EXISTS branch;
 CREATE TABLE branch
 (
@@ -39,9 +39,8 @@ CREATE TABLE branch
             branch_address VARCHAR(30),
             contact_no VARCHAR(15)
 );
-```
-Create table "employees"
-```sql
+
+--Create table "employees"
 DROP TABLE IF EXISTS employees;
 CREATE TABLE employees
 (
@@ -52,9 +51,8 @@ CREATE TABLE employees
             branch_id VARCHAR(10),
             FOREIGN KEY (branch_id) REFERENCES  branch(branch_id)
 );
-```
-Create table "members"
-```sql
+
+--Create table "members"
 DROP TABLE IF EXISTS members;
 CREATE TABLE members
 (
@@ -63,9 +61,8 @@ CREATE TABLE members
             member_address VARCHAR(30),
             reg_date DATE
 );
-```
-Create table "books"
-```sql
+
+--Create table "books"
 DROP TABLE IF EXISTS books;
 CREATE TABLE books
 (
@@ -77,9 +74,8 @@ CREATE TABLE books
             author VARCHAR(30),
             publisher VARCHAR(30)
 );
-```
-Create table "issued_status"
-```sql
+
+--Create table "issued_status"
 DROP TABLE IF EXISTS issued_status;
 CREATE TABLE issued_status
 (
@@ -93,9 +89,8 @@ CREATE TABLE issued_status
             FOREIGN KEY (issued_emp_id) REFERENCES employees(emp_id),
             FOREIGN KEY (issued_book_isbn) REFERENCES books(isbn) 
 );
-```
-Create table "return_status"
-```sql
+
+--Create table "return_status"
 DROP TABLE IF EXISTS return_status;
 CREATE TABLE return_status
 (
