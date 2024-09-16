@@ -105,9 +105,9 @@ OR
 SELECT e1.emp_id,
        e1.emp_name,
        e1.position,
-   	   e1.salary,
+       e1.salary,
        b.*,
-   	   e2.emp_name as manager
+       e2.emp_name as manager
 FROM employees e1
 JOIN branch b
 ON e1.branch_id = b.branch_id
