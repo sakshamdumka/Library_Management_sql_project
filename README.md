@@ -64,8 +64,8 @@ CREATE TABLE members
             reg_date DATE
 );
 ```
-```sql
 Create table "books"
+```sql
 DROP TABLE IF EXISTS books;
 CREATE TABLE books
 (
