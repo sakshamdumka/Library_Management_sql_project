@@ -416,14 +416,14 @@ $$;
 CALL select_book('IS145', 'C109', '978-0-14-118776-1', 'E104');
 ```
 
-***TASK 19:*** Create Table As Select (CTAS) 
+***TASK 19:*** ***Create Table As Select (CTAS)***
 <br>
-Objective:Create a CTAS (Create Table As Select) query to identify overdue books and calculate fines.
+***Objective:Create a CTAS (Create Table As Select) query to identify overdue books and calculate fines.***
 <br>
-Description: Write a CTAS query to create a new table that lists each member and the books they have
+***Description: Write a CTAS query to create a new table that lists each member and the books they have
 issued but not returned within 30 days. The table should include: The number of overdue books.
 The total fines, with each day's fine calculated at $0.50. The number of books issued by each member.
-The resulting table should show: Member ID Number of overdue books Total fines
+The resulting table should show: Member ID Number of overdue books Total fines***
 ```sql
 WITH cte1 AS(
 SELECT *,
