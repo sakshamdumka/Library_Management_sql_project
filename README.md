@@ -137,16 +137,19 @@ Write a query to identify members who have overdue books (assume a 30-day return
 Display the member's_id, member's name, book title, issue date, and days overdue.***
 ```sql
 SELECT ist.issued_member_id,
-	   m.member_name,
-	   b.book_title,
-	   ist.issued_date,
-	   (CURRENT_DATE - ist.issued_date) - 30 as days_overdue
+       m.member_name,
+       b.book_title,
+       ist.issued_date,
+       (CURRENT_DATE - ist.issued_date) - 30 as days_overdue
 FROM issued_status ist 
-JOIN members m
+JOIN
+members m
 ON ist.issued_member_id = m.member_id
-JOIN books b
+JOIN
+books b
 ON ist.issued_book_isbn = b.isbn
-LEFT JOIN return_status rs
+LEFT JOIN
+return_status rs
 ON ist.issued_id = rs.issued_id
 WHERE return_date IS NULL
 AND (CURRENT_DATE - ist.issued_date) - 30 >=1
