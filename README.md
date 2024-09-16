@@ -2,6 +2,9 @@
 
 ## Project Overview
 
+***Project Title:*** Library Management System
+***Database:*** ```sqllibrary_management_db```
+
 ***PROJECT TASKS***
 
 ***TASK 1. Create a New Book Record***
