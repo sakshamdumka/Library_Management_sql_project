@@ -186,7 +186,7 @@ BEGIN
 END;
 $$;
 ```
---Call Stored Procedure
+Call Stored Procedure
 ```sql
 CALL add_return_status('RS125', 'IS137');
 ```
