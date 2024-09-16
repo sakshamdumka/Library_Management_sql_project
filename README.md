@@ -69,10 +69,10 @@ WHERE category = 'Classic'
 SELECT 
     b.category,
     SUM(b.rental_price)
-FROM issued_status as i
+FROM issued_status as ist
 JOIN
 books as b
-ON b.isbn = i.issued_book_isbn
+ON b.isbn = ist.issued_book_isbn
 GROUP BY 1
 ```
 
