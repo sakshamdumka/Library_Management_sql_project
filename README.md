@@ -9,7 +9,6 @@
 **Description:**
 This project demonstrates the implementation of a Library Management System using SQL. It includes creating and managing tables, performing CRUD operations, and executing advanced SQL queries. The goal is to showcase skills in database design, manipulation, and querying.
 <br>
-**Database:** ```library_management_db```
 
 ## Objectives
 **1.** **Set up the Library Management System Database:** Created and populated the database with tables for branches, employees, members, books,   issued status, and return status.
