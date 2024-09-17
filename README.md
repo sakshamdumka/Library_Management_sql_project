@@ -171,6 +171,12 @@ ON b.isbn = i.issued_book_isbn
 GROUP BY b.book_title
 ```
 
+## Data Analysis and Findings
+<br>
+The following SQL queries were used to address specific questions.
+
+<br>
+
 ***TASK 7. Retrieve All Books in a Specific Category:***
 ```sql
 SELECT *
