@@ -2,33 +2,34 @@
 
 ## Project Overview:
 
-***Description:***
+**Description:**
 This project demonstrates the implementation of a Library Management System using SQL. It includes creating and managing tables, performing CRUD operations, and executing advanced SQL queries. The goal is to showcase skills in database design, manipulation, and querying.
 <br>
 
-***Project Title:*** Library Management System
+**Project Title:** Library Management System
 <br>
-***Database:*** ```library_management_db```
+**Database:** ```library_management_db```
 
 ## Objectives
-**1.** ***Set up the Library Management System Database:*** Created and populated the database with tables for branches, employees, members, books,   issued status, and return status.
+**1.** **Set up the Library Management System Database:** Created and populated the database with tables for branches, employees, members, books,   issued status, and return status.
 <br>
-**2.** ***CRUD Operations:*** Performed CREATE, READ, UPDATE, and DELETE operations on the data.
+**2.** **CRUD Operations:** Performed CREATE, READ, UPDATE, and DELETE operations on the data.
 <br>
-**3.** ***CTAS (Create Table As Select):*** Utilized CTAS to create new tables based on query results.
+**3.** **CTAS (Create Table As Select):** Utilized CTAS to create new tables based on query results.
 <br>
-**4.** ***Advanced SQL Queries:*** Developed complex queries to analyze and retrieve specific data.
+**4.** **Advanced SQL Queries:** Developed complex queries to analyze and retrieve specific data.
 
 ## Project Structure
-**1.** ***Database Setup***
+**1.** **Database Setup**
+<br>
 <br>
 ![image alt](https://github.com/sakshamdumka/Library_Management_sql_project/blob/1386b86cfd123b24ce22ec3bf36114f185d29944/library_erd.png)
 
-***Database Creation:*** Created a database named ```library_management_db```
+**Database Creation:** Created a database named ```library_management_db```
 ```sql
 CREATE DATABASE library_db;
 ```
-***Table Creation:*** Created tables for branches, employees, members, books, issued status, and return status. Each table includes relevant columns and relationships.
+**Table Creation:** Created tables for branches, employees, members, books, issued status, and return status. Each table includes relevant columns and relationships.
 <br>
 
 ```sql
@@ -107,13 +108,13 @@ CREATE TABLE return_status
 <br>
 
 ## 2. CRUD Operations
-***Create:*** Inserted sample records into the books table.
+**Create:** Inserted sample records into the books table.
 <br>
-***Read:*** Retrieved and displayed data from various tables.
+**Read:** Retrieved and displayed data from various tables.
 <br>
-***Update:*** Updated records in the employees table.
+**Update:** Updated records in the employees table.
 <br>
-***Delete:*** Removed records from the members table as needed.
+**Delete:** Removed records from the members table as needed.
 
 ***TASK 1. Create a New Book Record.***
 <br>
