@@ -23,6 +23,7 @@ This project demonstrates the implementation of a Library Management System usin
 ### 1. Database Setup
 <br>
 <br>
+
 ![image alt](https://github.com/sakshamdumka/Library_Management_sql_project/blob/1386b86cfd123b24ce22ec3bf36114f185d29944/library_erd.png)
 
 **Database Creation:** Created a database named ```library_management_db```
@@ -107,7 +108,7 @@ CREATE TABLE return_status
 ```
 <br>
 
-## 2. CRUD Operations
+### 2. CRUD Operations
 **Create:** Inserted sample records into the books table.
 <br>
 **Read:** Retrieved and displayed data from various tables.
@@ -157,7 +158,7 @@ GROUP BY issued_emp_id
 HAVING COUNT(*) >1
 ```
 
-## 3.CTAS (Create Table As Select)
+### 3. CTAS (Create Table As Select)
 ***TASK 6: Create Summary Tables:***
 <br>
 ***Use CTAS to generate new tables based on query results - Find out each book with total book_issued_cnt***
@@ -172,7 +173,7 @@ ON b.isbn = i.issued_book_isbn
 GROUP BY b.book_title
 ```
 
-## Data Analysis and Findings
+### 4. Data Analysis and Findings
 The following SQL queries were used to address specific questions.
 <br>
 <br>
@@ -252,7 +253,7 @@ ON ist.issued_id = rs.issued_id
 AND rs.return_id IS NULL
 ```
 
-## Advanced SQL Operations
+### Advanced SQL Operations
 
 ***TASK 13: Identify Members with Overdue Books
 Write a query to identify members who have overdue books (assume a 30-day return period).
