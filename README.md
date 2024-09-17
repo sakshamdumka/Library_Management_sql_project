@@ -172,9 +172,8 @@ GROUP BY b.book_title
 ```
 
 ## Data Analysis and Findings
-<br>
 The following SQL queries were used to address specific questions.
-
+<br>
 <br>
 
 ***TASK 7. Retrieve All Books in a Specific Category:***
@@ -251,6 +250,8 @@ LEFT JOIN return_status rs
 ON ist.issued_id = rs.issued_id
 AND rs.return_id IS NULL
 ```
+
+## Advanced SQL Operations
 
 ***TASK 13: Identify Members with Overdue Books
 Write a query to identify members who have overdue books (assume a 30-day return period).
