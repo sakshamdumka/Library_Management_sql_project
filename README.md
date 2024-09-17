@@ -8,6 +8,7 @@ This project demonstrates the implementation of a Library Management System usin
 
 **Project Title:** Library Management System
 <br>
+
 **Database:** ```library_management_db```
 
 ## Objectives
