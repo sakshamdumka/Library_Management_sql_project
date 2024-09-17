@@ -175,7 +175,6 @@ GROUP BY b.book_title
 ### 4. Data Analysis and Findings
 The following SQL queries were used to address specific questions.
 <br>
-<br>
 
 ***TASK 7. Retrieve All Books in a Specific Category:***
 ```sql
