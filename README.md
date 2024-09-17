@@ -7,7 +7,9 @@ This project demonstrates the implementation of a Library Management System usin
 <br>
 
 **Project Title:** Library Management System
-<br>
+
+![image alt](https://github.com/sakshamdumka/Library_Management_sql_project/blob/5b5a28d67316feca24a1fc3a21f213e0eb2dbadc/library-img.jpg)
+
 **Database:** ```library_management_db```
 
 ## Objectives
