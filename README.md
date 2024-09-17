@@ -157,6 +157,7 @@ GROUP BY issued_emp_id
 HAVING COUNT(*) >1
 ```
 
+## 3.CTAS (Create Table As Select)
 ***TASK 6: Create Summary Tables:***
 <br>
 ***Use CTAS to generate new tables based on query results - Find out each book with total book_issued_cnt***
