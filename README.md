@@ -21,8 +21,7 @@ This project demonstrates the implementation of a Library Management System usin
 
 ## Project Structure
 **1.** ***Database Setup***
-![ERD](https://github.com/sakshamdumka/Library_Management_sql_project---C:\Users\Lenovo\OneDrive\Desktop\SQL Real Projects\Library Management System SQL project/library_erd.png)
-<br>
+![image alt](https://github.com/sakshamdumka/Library_Management_sql_project/blob/1386b86cfd123b24ce22ec3bf36114f185d29944/library_erd.png)
 
 ***Database Creation:*** Created a database named ```library_management_db```
 ```sql
