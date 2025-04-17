@@ -202,24 +202,7 @@ FROM members
 WHERE reg_date BETWEEN CURRENT_DATE - INTERVAL '180 DAYS' and CURRENT_DATE
 ```
 
-***TASK 10: List Employees with Their Branch Manager's Name and their branch details:***
-```sql
-SELECT x.emp_name,
-	   y.emp_name as manager_name,
-	   x.branch_address,
-	   x.contact_no
-FROM 
-(SELECT * FROM employees e
-JOIN branch b
-ON e.branch_id = b.branch_id) x
-JOIN
-(SELECT * FROM employees e
-JOIN branch b
-ON e.branch_id = b.branch_id) y
-ON x.manager_id = y.emp_id
-```
-OR
-
+**TASK 10: List Employees with Their Branch Manager's Name and their branch details:***
 ```sql
 SELECT e1.emp_id,
        e1.emp_name,
